@@ -1,0 +1,56 @@
+.btn
+  position: relative
+  width: 100%
+  max-width: 261px
+  height: 100px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: $lato
+  font-size: 24px
+  color: $color__text
+  text-decoration: none
+  z-index: 999
+
+  &::after
+    position: absolute
+    content: ''
+    background-image: url("img/btn-front.svg")
+    background-repeat: no-repeat
+    top: 0px
+    left: 0px
+    width: 100%
+    max-width: 261px
+    height: 100px
+    z-index: -1
+
+  &::before
+    position: absolute
+    content: ''
+    background-image: url("img/btn-back.svg")
+    background-repeat: no-repeat
+    top: 10px
+    left: 10px
+    width: 100%
+    max-width: 261px
+    height: 100px
+    z-index: -1
+    transition: all 0.3s ease
+
+  &:hover
+    @media #{$mouse-device}
+      transition: all 0.3s ease
+      
+  &:hover::before
+    @media #{$mouse-device}
+      top: 0px
+      left: 0px
+
+  &:active
+    transition: all 0.3s ease
+
+
+  &:not(:hover)
+    transition: all 0.3s ease
+
+

@@ -1,0 +1,153 @@
+.header
+  min-width: 1440px
+  overflow-x: hidden
+
+  &__top
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #F8C504
+    padding: 35px 0
+    background-image: url("img/pattern-001.png")
+
+    &-inner
+      max-width: 1270px
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+  &__socials
+    list-style-type: none
+    display: flex
+    justify-content: center
+    gap: 50px
+
+    &-link
+      width: 100%
+      width: 52px
+      height: 52px      
+      background-repeat: no-repeat
+      display: block
+      background-color: #000000
+      transition: all 0.3s ease
+
+      &:hover
+        @media #{$mouse-device}
+          background-color: #E3000B
+
+      &:active
+        background-color: #E3000B
+
+      &--x
+        background-image: url('img/icon-socials--x.svg')
+      
+      &--telegram
+        background-image: url('img/icon-socials--telegram.svg')
+
+      &--coinmarketcap
+        background-image: url('img/icon-socials--m.svg')
+
+      &--binance
+        background-image: url('img/icon-socials--binance.svg')
+
+  &__btn-open
+    display: none
+    width: 120px
+    height: 120px
+    background-image: url("img/menu-open.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: transparent
+
+  &__btn-close
+    display: none
+    width: 120px
+    height: 120px
+    background-image: url("img/menu-close.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: transparent
+
+  &__nav
+    background-color: #131313
+    height: 80px
+    display: flex
+    justify-content: center
+
+  &__links
+    list-style-type: none
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 855px
+    width: 100%
+    padding-left: 0
+    z-index: 99999
+
+  &__links--mobile
+    display: none
+
+  &__link
+    color: $color__text-alt
+    text-decoration: none
+    transition: all 0.3s ease 
+
+    &:hover
+      @media #{$mouse-device}
+        color: #E3000B
+
+    &:active
+      color: #E3000B
+
+  
+@media screen and (max-width: 480px)
+  .header
+
+    &__btn.btn
+      display: none
+
+    &__btn-open
+      display: block
+      border: none
+
+    &__btn-close
+      display: block
+      border: none
+
+    &__links
+      position: absolute
+      top: 0
+      left: 0
+      flex-direction: column
+      align-items: center
+      min-width: 1440px
+
+
+      &-item
+        background-color: #C8102E
+        display: flex
+        justify-content: center
+        align-items: center
+
+      &--mobile
+        display: none
+        position: absolute
+        top: 190px
+        left: 0
+        margin: 0
+
+        .opened &
+          display: flex
+
+    &__link
+      height: 300px
+      font-size: 74px
+      width: 1440px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-top: 4px solid #A3A7AC
+
+    &__nav
+      display: none
