@@ -202,14 +202,30 @@
   </script>
 
   <script>
-    var width = screen.width;
-    var oldViewport = document.querySelector('meta[name="viewport"]');
-    var viewport = document.createElement('meta');
-    viewport.setAttribute('name', 'viewport');
-    viewport.setAttribute('content', 'width=' + (width <= 1440 ? '1440' : 'device-width'));
-    document.head.replaceChild(viewport, oldViewport);
-  </script>
+    const siteBody = document.querySelector("body");
+    let timeout = false;
+    const delay = 250; 
+    const calls = 0;
+    const minWidth = 1440;
 
+    const setZoom = () => {
+      let zoom = window.innerWidth / minWidth;
+      console.log(zoom);
+      if (zoom < 1) {
+        body.style = "zoom:" + zoom;
+        
+      }
+      
+      console.log(body.style.zoom);
+    }
+
+    window.addEventListener('resize', function() {
+      // clear the timeout
+      clearTimeout(timeout);
+      // start timing for event "completion"
+      timeout = setTimeout(setZoom, delay);
+    });
+  </script>
 
 </body>
 
