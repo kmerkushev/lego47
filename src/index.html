@@ -49,10 +49,10 @@
       <section class="header__top">
         <div class="header__top-inner">
           <ul class="header__socials">
-            <li class="header__socials-item"><a class="header__socials-link header__socials-link--x" href="#"><span class="visually-hidden">X</span></a></li>
-            <li class="header__socials-item"><a class="header__socials-link header__socials-link--telegram" href="#"><span class="visually-hidden">Telegram</span></a></li>
-            <li class="header__socials-item"><a class="header__socials-link header__socials-link--coinmarketcap" href="#"><span class="visually-hidden">Coinmarketcap</span></a></li>
-            <li class="header__socials-item"><a class="header__socials-link header__socials-link--binance" href="#"><span class="visually-hidden">Binance</span></a></li>
+            <li class="header__socials-item"><a class="header__socials-link header__socials-link--x" href="https://x.com/lego_47" target="_blank"><span class="visually-hidden">X</span></a></li>
+            <li class="header__socials-item"><a class="header__socials-link header__socials-link--telegram" href="https://t.me/+zbcQzx1M9gNlMDli" target="_blank"><span class="visually-hidden">Telegram</span></a></li>
+            <!--<li class="header__socials-item"><a class="header__socials-link header__socials-link--coinmarketcap" href="#" target="_blank"><span class="visually-hidden">Coinmarketcap</span></a></li>
+            <li class="header__socials-item"><a class="header__socials-link header__socials-link--binance" href="#" target="_blank"><span class="visually-hidden">Binance</span></a></li>-->
           </ul>
 
           <img src="img/logo.svg" width="384" height="119" alt="$LEGO47">
@@ -213,10 +213,9 @@
       console.log(zoom);
       if (zoom < 1) {
         body.style = "zoom:" + zoom;
-        
+      } else {
+        body.style = "zoom: 1";
       }
-      
-      console.log(body.style.zoom);
     }
 
     window.addEventListener('resize', function() {
