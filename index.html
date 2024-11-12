@@ -30,6 +30,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body class="page__body body">
@@ -198,6 +199,15 @@
     }
 
     document.addEventListener('click', clickDocumentHandler);
+  </script>
+
+  <script>
+    var width = screen.width;
+    var oldViewport = document.querySelector('meta[name="viewport"]');
+    var viewport = document.createElement('meta');
+    viewport.setAttribute('name', 'viewport');
+    viewport.setAttribute('content', 'width=' + (width <= 1440 ? '1440' : 'device-width'));
+    document.head.replaceChild(viewport, oldViewport);
   </script>
 
 
